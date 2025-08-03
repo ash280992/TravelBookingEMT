@@ -31,7 +31,7 @@ jobs:
         run: npx cypress run --browser chrome
 
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-results
           path: cypress/results
