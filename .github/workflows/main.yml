@@ -22,10 +22,7 @@ jobs:
         run: npm ci
 
       - name: Start the app
-        run: npm start &
-        
-      - name: Wait for app to be ready
-        run: npx wait-on http://localhost:3000
+        run: npm start
 
       - name: Run Cypress tests
         run: npx cypress run --browser chrome
