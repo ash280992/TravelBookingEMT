@@ -1,0 +1,14 @@
+{
+  "name": "redbusproject",
+  "version": "1.0.0",
+  "description": "Automating Redbus bus booking flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashish",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.2"
+  }
+}
