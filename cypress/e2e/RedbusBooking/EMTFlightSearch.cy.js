@@ -31,6 +31,8 @@ describe('EMT flight booking end to end', ()=>{
         cy.get('.add.plus_box1').first().should('be.enabled').click({ multiple: true }, {force:true})
         cy.get('#traveLer').click()
         cy.get('.srchBtnSe').should('be.enabled').click()
+        //Adding Comment to see if CI works
+        cy.url();
 
 })
 
