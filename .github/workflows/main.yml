@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Run Cypress Tests
-        run: npx cypress run --spec ~/CypressProject/EMTProject/cypress/e2e/RedbusBooking/EMTFlightSearch.cy.js --headless --browser chrome
+        run: npx cypress run --spec //cypress/e2e/RedbusBooking/EMTFlightSearch.cy.js --headless --browser chrome
