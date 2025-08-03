@@ -1,29 +1,17 @@
-name: CI Pipeline
+name: Cypress Tests
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Run Cypress tests
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          build: npm run build
           start: npm start
-          wait-on: http://localhost:3000
-          wait-on-timeout: 60
-          browser: chrome
